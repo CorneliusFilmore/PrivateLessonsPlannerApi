@@ -1,4 +1,5 @@
 using PrivateLessonsPlannerApi.Data;
+using PrivateLessonsPlannerApi.Repositories;
 using System.Reflection;
 
 namespace PrivateLessonsPlannerApi
@@ -11,6 +12,7 @@ namespace PrivateLessonsPlannerApi
 
             builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
             builder.Services.AddDbContext<DbContextClass>();
+            builder.Services.AddScoped<IStudentRepository, StudentRepository>();
             // Add services to the container.
 
             builder.Services.AddControllers();
