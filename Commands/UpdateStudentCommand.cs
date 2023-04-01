@@ -7,10 +7,10 @@ namespace PrivateLessonsPlannerApi.Commands
         public int Id { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
-        public int PhoneNumber { get; set; }
+        public string PhoneNumber { get; set; }
         public string PhoneName { get; set; }
 
-        public UpdateStudentCommand(int id, string name, string surname, int phoneNumber, string phoneName)
+        public UpdateStudentCommand(int id, string name, string surname, string phoneNumber, string phoneName)
         {
             Id = id;
             Name = name;
